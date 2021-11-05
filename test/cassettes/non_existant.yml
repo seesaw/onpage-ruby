@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://COMPANY_NAME.onpage.it/api/view/API_TOKEN/things
+    body:
+      encoding: UTF-8
+      string: '{"resource":"non_existant","fields":["+"],"return":"first","options":{"no_labels":true,"hyper_compact":true,"use_field_names":true},"_method":"get"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - COMPANY_NAME.onpage.it
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Mon, 22 Nov 2021 21:05:03 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache, private
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"message":"Cannot find resource non_existant"}'
+  recorded_at: Mon, 22 Nov 2021 21:05:03 GMT
+recorded_with: VCR 6.0.0

@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://COMPANY_NAME.onpage.it/api/view/API_TOKEN/things
+    body:
+      encoding: UTF-8
+      string: '{"resource":"rcapitoli","fields":["+"],"return":"list","options":{"no_labels":true,"hyper_compact":true,"use_field_names":true},"filters":[["fdescrizione","like","led"]],"_method":"get"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - COMPANY_NAME.onpage.it
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 22 Nov 2021 21:05:04 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Cache-Control:
+      - no-cache, private
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":4857794,"created_at":"2019-06-25 10:50:28","updated_at":"2021-06-18
+        14:20:10","resource_id":16478,"order":"-0.48388671875","default_folder_id":null,"domain":null,"schema_id":1435,"fields":{"fid":[6],"fdescrizione_de":["LED-Scheinwerfer"],"fdescrizione_es":["Faros
+        LED"],"fdescrizione_fr":["Phares \u00e0 LED"],"fdescrizione_gb":["LED headlights"],"fdescrizione_it":["Fari
+        LED"],"fdescrizione_ru":["\u0441\u0432\u0435\u0442\u043e\u0434\u0438\u043e\u0434\u043d\u044b\u0435
+        \u0444\u0430\u0440\u044b"],"findice":11,"fidprogramma":1,"fdate_modified":"2018-04-21
+        12:07:29","fmodified_by":"onpageli_admin@localhost"},"relations":{},"rel_ids":{}},{"id":4857796,"created_at":"2019-06-25
+        10:50:29","updated_at":"2019-11-27 16:19:03","resource_id":16478,"order":"-0.482421875","default_folder_id":null,"domain":null,"schema_id":1435,"fields":{"fid":[8],"fdescrizione_de":["LED-Projektoren"],"fdescrizione_es":["Proyectores
+        LED"],"fdescrizione_fr":["Projecteurs LED"],"fdescrizione_gb":["LED projectors"],"fdescrizione_it":["Proiettori
+        LED"],"fdescrizione_ru":["\u0421\u0432\u0435\u0442\u043e\u0434\u0438\u043e\u0434\u043d\u044b\u0435
+        \u043f\u0440\u043e\u0436\u0435\u043a\u0442\u043e\u0440\u044b"],"findice":13,"fidprogramma":1,"fdate_modified":"2018-01-26
+        08:33:04","fmodified_by":"onpageli_admin@localhost"},"relations":{},"rel_ids":{}},{"id":4857798,"created_at":"2019-06-25
+        10:50:28","updated_at":"2021-06-18 14:20:18","resource_id":16478,"order":"-0.47216796875","default_folder_id":null,"domain":null,"schema_id":1435,"fields":{"fid":[4],"fdescrizione_de":["LED-Streifen"],"fdescrizione_es":["Tira
+        de LEDs"],"fdescrizione_fr":["Bande LED"],"fdescrizione_gb":["LED Strip"],"fdescrizione_it":["Strip
+        LED"],"fdescrizione_ru":["\u0421\u0432\u0435\u0442\u043e\u0434\u0438\u043e\u0434\u043d\u0430\u044f
+        \u043b\u0435\u043d\u0442\u0430"],"findice":8,"fidprogramma":1,"fdate_modified":"2018-01-26
+        08:31:56","fmodified_by":"onpageli_admin@localhost"},"relations":{},"rel_ids":{}},{"id":4857799,"created_at":"2019-06-25
+        10:50:27","updated_at":"2020-01-21 09:32:19","resource_id":16478,"order":"-0.46484375","default_folder_id":null,"domain":null,"schema_id":1435,"fields":{"fid":[3],"fdescrizione_de":["LED-Panels"],"fdescrizione_es":["Paneles
+        LED"],"fdescrizione_fr":["Panneaux LED"],"fdescrizione_gb":["LED Panels"],"fdescrizione_it":["Pannelli
+        LED"],"fdescrizione_ru":["\u0421\u0432\u0435\u0442\u043e\u0434\u0438\u043e\u0434\u043d\u044b\u0435
+        \u043f\u0430\u043d\u0435\u043b\u0438"],"findice":6,"fidprogramma":1,"fdate_modified":"2018-01-25
+        16:47:29","fmodified_by":"onpageli_admin@localhost"},"relations":{},"rel_ids":{}},{"id":4857801,"created_at":"2019-06-25
+        10:50:29","updated_at":"2019-06-25 10:50:29","resource_id":16478,"order":"9","default_folder_id":null,"domain":null,"schema_id":1435,"fields":{"fid":[10],"fdescrizione_de":["LED-Stufenmarkierer"],"fdescrizione_es":["Marcadores
+        LED de pasos"],"fdescrizione_fr":["Marqueurs de pas \u00e0 LED"],"fdescrizione_gb":["LED
+        step markers"],"fdescrizione_it":["Segnapasso LED"],"fdescrizione_ru":["\u0441\u0432\u0435\u0442\u043e\u0434\u0438\u043e\u0434\u043d\u044b\u0435
+        \u043c\u0430\u0440\u043a\u0435\u0440\u044b"],"findice":15,"fidprogramma":1,"fdate_modified":"2018-01-26
+        08:33:27","fmodified_by":"onpageli_admin@localhost"},"relations":{},"rel_ids":{}},{"id":4857802,"created_at":"2019-06-25
+        10:50:29","updated_at":"2019-06-25 10:50:29","resource_id":16478,"order":"10","default_folder_id":null,"domain":null,"schema_id":1435,"fields":{"fid":[11],"fdescrizione_de":["LED-Lichtquellen"],"fdescrizione_es":["Fuentes
+        de luz LED"],"fdescrizione_fr":["Sources lumineuses LED"],"fdescrizione_gb":["LED
+        light sources"],"fdescrizione_it":["Sorgenti luminose LED"],"fdescrizione_ru":["\u0441\u0432\u0435\u0442\u043e\u0434\u0438\u043e\u0434\u043d\u044b\u0435
+        \u0438\u0441\u0442\u043e\u0447\u043d\u0438\u043a\u0438 \u0441\u0432\u0435\u0442\u0430"],"findice":16,"fidprogramma":1,"fdate_modified":"2018-01-26
+        08:33:41","fmodified_by":"onpageli_admin@localhost"},"relations":{},"rel_ids":{}},{"id":4857803,"created_at":"2019-06-25
+        10:50:29","updated_at":"2019-06-25 10:50:29","resource_id":16478,"order":"11","default_folder_id":null,"domain":null,"schema_id":1435,"fields":{"fid":[12],"fdescrizione_de":["LED-Zubeh\u00f6r"],"fdescrizione_es":["Accesorios
+        LED"],"fdescrizione_fr":["Accessoires LED"],"fdescrizione_gb":["LED accessories"],"fdescrizione_it":["Accessori
+        LED"],"fdescrizione_ru":["\u0421\u0432\u0435\u0442\u043e\u0434\u0438\u043e\u0434\u043d\u044b\u0435
+        \u0430\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u044b"],"fdescrizione_zh":["LED\u914d\u4ef6"],"findice":19,"fidprogramma":1,"fdate_modified":"2018-01-26
+        08:34:13","fmodified_by":"onpageli_admin@localhost"},"relations":{},"rel_ids":{}},{"id":4857808,"created_at":"2019-06-25
+        10:50:31","updated_at":"2019-07-31 13:55:11","resource_id":16478,"order":"16","default_folder_id":null,"domain":null,"schema_id":1435,"fields":{"fid":[35],"fdescrizione_de":["Led
+        Downlight"],"fdescrizione_es":["L\u00e1mpara empotrada de leds"],"fdescrizione_fr":["Led
+        Downlight"],"fdescrizione_gb":["Led Downlight"],"fdescrizione_it":["Downlight
+        Led"],"fdescrizione_ru":["\u043f\u0440\u043e\u0436\u0435\u043a\u0442\u043e\u0440
+        \u0441\u0432\u0435\u0442\u043e\u0434\u0438\u043e\u0434\u043d\u044b\u0439"],"findice":1,"fidprogramma":1,"fdate_modified":"2018-02-16
+        09:43:37","fmodified_by":"onpageli_admin@localhost"},"relations":{},"rel_ids":{}},{"id":4857810,"created_at":"2019-06-25
+        10:50:31","updated_at":"2019-06-25 10:50:31","resource_id":16478,"order":"18","default_folder_id":null,"domain":null,"schema_id":1435,"fields":{"fid":[37],"fdescrizione_de":["LED-Strahler"],"fdescrizione_es":["Focos
+        LED"],"fdescrizione_fr":["Spots \u00e0 LED"],"fdescrizione_gb":["LED Spotlights"],"fdescrizione_it":["Faretti
+        LED"],"fdescrizione_ru":["\u0441\u0432\u0435\u0442\u043e\u0434\u0438\u043e\u0434\u043d\u044b\u0435
+        \u043f\u0440\u043e\u0436\u0435\u043a\u0442\u043e\u0440\u044b"],"findice":4,"fidprogramma":1,"fdate_modified":"2018-01-25
+        16:46:46","fmodified_by":"onpageli_admin@localhost"},"relations":{},"rel_ids":{}},{"id":4857811,"created_at":"2019-06-25
+        10:50:31","updated_at":"2019-06-25 10:50:31","resource_id":16478,"order":"19","default_folder_id":null,"domain":null,"schema_id":1435,"fields":{"fid":[38],"fdescrizione_de":["IP64-IP66
+        LED-Punktstrahler"],"fdescrizione_es":["Reflectores LED IP64-IP66"],"fdescrizione_fr":["Spots
+        \u00e0 LED IP64-IP66"],"fdescrizione_gb":["IP64-IP66 LED spotlights"],"fdescrizione_it":["Faretti
+        LED IP64-IP66"],"fdescrizione_ru":["IP64-IP66 \u0441\u0432\u0435\u0442\u043e\u0434\u0438\u043e\u0434\u043d\u044b\u0435
+        \u043f\u0440\u043e\u0436\u0435\u043a\u0442\u043e\u0440\u044b"],"findice":5,"fidprogramma":1,"fdate_modified":"2018-01-25
+        16:47:04","fmodified_by":"onpageli_admin@localhost"},"relations":{},"rel_ids":{}},{"id":4857812,"created_at":"2019-06-25
+        10:50:32","updated_at":"2019-06-25 10:50:32","resource_id":16478,"order":"20","default_folder_id":null,"domain":null,"schema_id":1435,"fields":{"fid":[39],"fdescrizione_de":["Spezielle
+        LED-Profile"],"fdescrizione_es":["Perfiles LED especiales"],"fdescrizione_fr":["Profils
+        LED sp\u00e9ciaux"],"fdescrizione_gb":["Special LED profiles"],"fdescrizione_it":["Profili
+        LED Speciali"],"fdescrizione_ru":["\u0421\u043f\u0435\u0446\u0438\u0430\u043b\u044c\u043d\u044b\u0435
+        \u0441\u0432\u0435\u0442\u043e\u0434\u0438\u043e\u0434\u043d\u044b\u0435 \u043f\u0440\u043e\u0444\u0438\u043b\u0438"],"findice":10,"fidprogramma":1,"fdate_modified":"2018-01-26
+        08:32:21","fmodified_by":"onpageli_admin@localhost"},"relations":{},"rel_ids":{}}]'
+  recorded_at: Mon, 22 Nov 2021 21:05:04 GMT
+recorded_with: VCR 6.0.0

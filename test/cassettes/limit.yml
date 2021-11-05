@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://COMPANY_NAME.onpage.it/api/view/API_TOKEN/things
+    body:
+      encoding: UTF-8
+      string: '{"resource":"rcapitoli","fields":["+"],"return":"list","options":{"no_labels":true,"hyper_compact":true,"use_field_names":true},"limit":5,"_method":"get"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - COMPANY_NAME.onpage.it
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 22 Nov 2021 21:05:01 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Cache-Control:
+      - no-cache, private
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":4857793,"created_at":"2019-06-25 10:50:28","updated_at":"2021-05-18
+        09:52:00","resource_id":16478,"order":"-0.4853515625","default_folder_id":null,"domain":null,"schema_id":1435,"fields":{"fdescrizione_de":["Aluminiumprofile"],"fdescrizione_es":["Perfiles
+        de aluminio"],"fdescrizione_fr":["Profil\u00e9s en aluminium"],"fdescrizione_gb":["Aluminium
+        profiles"],"fdescrizione_it":["Profili alluminio"],"fdescrizione_ru":["\u0410\u043b\u044e\u043c\u0438\u043d\u0438\u0435\u0432\u044b\u0435
+        \u043f\u0440\u043e\u0444\u0438\u043b\u0438"],"findice":9,"fidprogramma":1,"fdate_modified":"2018-01-26
+        08:32:07","fmodified_by":"onpageli_admin@localhost","fscheda":{"name":"controfili-alluminio.xlsx","ext":"xlsx","token":"6a9af34a40672d09821773a19270f1e96286bec2"},"fid":[5]},"relations":{},"rel_ids":{}},{"id":4857794,"created_at":"2019-06-25
+        10:50:28","updated_at":"2021-06-18 14:20:10","resource_id":16478,"order":"-0.48388671875","default_folder_id":null,"domain":null,"schema_id":1435,"fields":{"fid":[6],"fdescrizione_de":["LED-Scheinwerfer"],"fdescrizione_es":["Faros
+        LED"],"fdescrizione_fr":["Phares \u00e0 LED"],"fdescrizione_gb":["LED headlights"],"fdescrizione_it":["Fari
+        LED"],"fdescrizione_ru":["\u0441\u0432\u0435\u0442\u043e\u0434\u0438\u043e\u0434\u043d\u044b\u0435
+        \u0444\u0430\u0440\u044b"],"findice":11,"fidprogramma":1,"fdate_modified":"2018-04-21
+        12:07:29","fmodified_by":"onpageli_admin@localhost"},"relations":{},"rel_ids":{}},{"id":4857795,"created_at":"2019-06-25
+        10:50:28","updated_at":"2021-06-18 14:20:14","resource_id":16478,"order":"-0.483154296875","default_folder_id":null,"domain":null,"schema_id":1435,"fields":{"fid":[5,7,3],"fdescrizione_de":["Abblendscheinwerfer"],"fdescrizione_es":["Faros
+        delanteros de mano"],"fdescrizione_gb":["Drive-on headlights"],"fdescrizione_it":["Fari
+        carrabiliiii","descr 2"],"fdescrizione_ru":["\u0424\u0430\u0440\u044b \u0434\u0430\u043b\u044c\u043d\u0435\u0433\u043e
+        \u0441\u0432\u0435\u0442\u0430"],"findice":12,"fidprogramma":1,"fdate_modified":"2018-04-05
+        08:14:38","fmodified_by":"onpageli_admin@localhost","fscheda":{"name":"MASSIMA
+        POTENZA (1).png","ext":"png","token":"b56983f633c7ee8cf7150a48f8bb4c1dda8ea63b"},"fdescrizione12":"\ufffc","fdist":123.1,"fdimensione":[[null,null,3]]},"relations":{},"rel_ids":{}},{"id":4857796,"created_at":"2019-06-25
+        10:50:29","updated_at":"2019-11-27 16:19:03","resource_id":16478,"order":"-0.482421875","default_folder_id":null,"domain":null,"schema_id":1435,"fields":{"fid":[8],"fdescrizione_de":["LED-Projektoren"],"fdescrizione_es":["Proyectores
+        LED"],"fdescrizione_fr":["Projecteurs LED"],"fdescrizione_gb":["LED projectors"],"fdescrizione_it":["Proiettori
+        LED"],"fdescrizione_ru":["\u0421\u0432\u0435\u0442\u043e\u0434\u0438\u043e\u0434\u043d\u044b\u0435
+        \u043f\u0440\u043e\u0436\u0435\u043a\u0442\u043e\u0440\u044b"],"findice":13,"fidprogramma":1,"fdate_modified":"2018-01-26
+        08:33:04","fmodified_by":"onpageli_admin@localhost"},"relations":{},"rel_ids":{}},{"id":4857797,"created_at":"2019-06-25
+        10:50:27","updated_at":"2020-09-14 15:21:03","resource_id":16478,"order":"-0.4794921875","default_folder_id":null,"domain":null,"schema_id":1435,"fields":{"fmodified_by":"onpageli_admin@localhost","fidprogramma":1,"fdate_modified":"2018-09-03
+        15:45:26","fid":[2],"fdescrizione_de":["Deckensysteme"],"fdescrizione_es":["Sistemas
+        de techo"],"fdescrizione_fr":["Syst\u00e8mes de plafonds"],"fdescrizione_gb":["Ceiling
+        Systems"],"fdescrizione_it":["Sistemi a Plafone"],"fdescrizione_ru":["\u041f\u043e\u0442\u043e\u043b\u043e\u0447\u043d\u044b\u0435
+        \u0441\u0438\u0441\u0442\u0435\u043c\u044b"],"findice":7},"relations":{},"rel_ids":{}}]'
+  recorded_at: Mon, 22 Nov 2021 21:05:01 GMT
+recorded_with: VCR 6.0.0
