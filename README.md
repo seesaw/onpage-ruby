@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/seesaw/onpage_ruby/tree/main.svg?style=svg)](https://circleci.com/gh/seesaw/onpage_ruby/tree/s&m)
+
 ## WARNING: this software is a pre-release quality, features are provided “as is”, “with all faults”, and without any warranties, guarantees, or conditions of any kind. Your use of pre-release features are at your own risk.
 
 ### TODO
