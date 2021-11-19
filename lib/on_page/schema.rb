@@ -6,12 +6,14 @@ require_relative "field"
 module OnPage
   # OnPage::Schema
   class Schema
-    attr_reader :id, :label, :langs, :resources
+    attr_reader :id, :label, :langs, :resources, :created_at, :updated_at
 
     def initialize(json = {})
       @id = json["id"]
       @label = json["label"]
       @langs = json["langs"]
+      @created_at = Time.parse(json["created_at"])
+      @updated_at = Time.parse(json["updated_at"])
 
       @resources = {}
       @resource_names = {}
