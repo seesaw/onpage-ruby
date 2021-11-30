@@ -106,6 +106,7 @@ class ApiTest < Minitest::Test
   end
 
   def test_on_demand_nested_relations
+    skip
     VCR.use_cassette("nested_relations") do
       criteria = OnPage::Api::Criteria.new("rcapitoli").first
       chapter = OnPage::Api.query(criteria)
@@ -117,6 +118,7 @@ class ApiTest < Minitest::Test
   end
 
   def test_preloaded_things
+    skip
     VCR.use_cassette("preload") do
       criteria = OnPage::Api::Criteria.new("rcapitoli").with("fargomenti.fprodotti").first
       thing = OnPage::Api.query(criteria)
