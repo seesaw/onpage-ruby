@@ -10,6 +10,7 @@ module OnPage
     attr_accessor :configuration
   end
 
+  # FIXME: avoid warning: method redefined; discarding old configuration
   def self.configuration
     @configuration ||= Configuration.new
   end

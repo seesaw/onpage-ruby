@@ -12,10 +12,11 @@ VCR.configure do |c|
   c.hook_into :webmock
   c.cassette_library_dir = "test/cassettes"
   c.default_cassette_options = {
+    # record: :new_episodes,
     match_requests_on: %i[method uri body]
   }
 
-  # use real token to record new tests
+  # NOTE: use real token to record new tests
   c.filter_sensitive_data("COMPANY_NAME") { "company_name" }
   c.filter_sensitive_data("API_TOKEN") { "api_token" }
 end
