@@ -142,7 +142,7 @@ class ApiTest < Minitest::Test
       image = argument.val("fdisegno1")
       assert_instance_of OnPage::Downloadable, image
       storage_path = "https://#{OnPage.configuration.company}.onpage.it/api/storage/"
-      expected_url = URI("#{storage_path}PMWJiNp8eYn2Hy3TevNU")
+      expected_url = URI("#{storage_path}dd03bec8a725366c6e6327ceb0b91ffd587be553")
       assert_equal image.download_url, expected_url
     end
   end
@@ -154,7 +154,7 @@ class ApiTest < Minitest::Test
       image = argument.val("fdisegno1")
       assert_instance_of OnPage::Downloadable, image
       storage_path = "https://#{OnPage.configuration.company}.onpage.it/api/storage/"
-      expected_url = URI("#{storage_path}PMWJiNp8eYn2Hy3TevNU.230x-contain.png?name=shutterstock_36442114-ok-NEW.jpg")
+      expected_url = URI("#{storage_path}dd03bec8a725366c6e6327ceb0b91ffd587be553.230x-contain.png?name=shutterstock_36442114-ok-NEW.jpg")
       transformation_options = { x: 230, ext: "png", original_name: true }
       assert_equal image.download_url(transformation_options), expected_url
     end

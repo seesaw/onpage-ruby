@@ -15,15 +15,13 @@ http_interactions:
       - "*/*"
       User-Agent:
       - Ruby
-      Host:
-      - COMPANY_NAME.onpage.it
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Mon, 22 Nov 2021 21:05:01 GMT
+      - Tue, 14 Dec 2021 14:15:36 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -40,11 +38,11 @@ http_interactions:
       - max-age=15724800; includeSubDomains
     body:
       encoding: ASCII-8BIT
-      string: '{"id":4857793,"created_at":"2019-06-25 10:50:28","updated_at":"2021-05-18
-        09:52:00","resource_id":16478,"order":"-0.4853515625","default_folder_id":null,"domain":null,"schema_id":1435,"fields":{"fid":[5],"fdescrizione_de":["Aluminiumprofile"],"fdescrizione_es":["Perfiles
+      string: '{"id":4857793,"resource_id":16478,"created_at":"2019-06-25 10:50:28","updated_at":"2021-05-18
+        09:52:00","order":"-0.4853515625","default_folder_id":null,"fields":{"fid":[5],"fdescrizione_de":["Aluminiumprofile"],"fdescrizione_es":["Perfiles
         de aluminio"],"fdescrizione_fr":["Profil\u00e9s en aluminium"],"fdescrizione_gb":["Aluminium
         profiles"],"fdescrizione_it":["Profili alluminio"],"fdescrizione_ru":["\u0410\u043b\u044e\u043c\u0438\u043d\u0438\u0435\u0432\u044b\u0435
         \u043f\u0440\u043e\u0444\u0438\u043b\u0438"],"findice":9,"fidprogramma":1,"fdate_modified":"2018-01-26
         08:32:07","fmodified_by":"onpageli_admin@localhost","fscheda":{"name":"controfili-alluminio.xlsx","ext":"xlsx","token":"6a9af34a40672d09821773a19270f1e96286bec2"}},"relations":{},"rel_ids":{}}'
-  recorded_at: Mon, 22 Nov 2021 21:05:01 GMT
+  recorded_at: Tue, 14 Dec 2021 14:15:36 GMT
 recorded_with: VCR 6.0.0
