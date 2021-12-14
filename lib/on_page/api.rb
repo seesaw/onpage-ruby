@@ -79,8 +79,6 @@ module OnPage
 
     def http_client
       HttpClient.new
-                .connect_timeout(OnPage.configuration.connect_timeout)
-                .read_timeout(OnPage.configuration.read_timeout)
       #         .request_handler_class(OnPage::Api::JSONRequestHandler)
     end
   end

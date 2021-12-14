@@ -6,13 +6,8 @@ require "on_page/version"
 
 # OnPage module
 module OnPage
-  class << self
-    attr_accessor :configuration
-  end
-
-  # FIXME: avoid warning: method redefined; discarding old configuration
   def self.configuration
-    @configuration ||= Configuration.new
+    @configuration ||= Config.new
   end
 
   # Used to configure OnPage.

@@ -35,8 +35,6 @@ module OnPage
     # OnPage::Api::HttpClient
     class HttpClient
       def initialize
-        @connect_timeout = 1000
-        @read_timeout = 2000
         @criteria = {}
         @response_handler = nil
         @request_handler_class = JSONRequestHandler
@@ -61,16 +59,6 @@ module OnPage
         self
       end
 
-      def connect_timeout(connect_timeout)
-        @connect_timeout = connect_timeout
-        self
-      end
-
-      def read_timeout(read_timeout)
-        @read_timeout = read_timeout
-        self
-      end
-
       def response_handler(response_handler)
         @response_handler = response_handler
         self
@@ -83,24 +71,33 @@ module OnPage
 
       private
 
+      def http_call_options(uri)
+        options = {
+          use_ssl: uri.instance_of?(URI::HTTPS)
+        }
+        config = OnPage.configuration
+        options[:read_timeout] = config.read_timeout if config.read_timeout
+        options[:open_timeout] = config.connect_timeout if config.connect_timeout
+        options
+      end
+
       def do_call
         raise ArgumentError, "You must specify a URL" if @uri.nil?
         raise ArgumentError, "You must specify a response handler" if @response_handler.nil?
 
         # raise ArgumentError, "You must specify a body handler class" if @request_handler_class.nil?
 
-        body_handler = @request_handler_class.new(@criteria)
-
-        outcome = begin
+        http_response = begin
           OnPage::Api.inc_request_counter
-          http_response = Net::HTTP.post(@uri, body_handler.body, body_handler.headers)
-
-          @response_handler.call(http_response)
+          Net::HTTP.start(@uri.host, @uri.port, http_call_options(@uri)) do |http|
+            body_handler = @request_handler_class.new(@criteria)
+            http.request_post(@uri.path, body_handler.body, body_handler.headers)
+          end
         rescue StandardError => e
-          puts e.full_message
           raise OnPage::ApiError, e.message
         end
 
+        outcome = @response_handler.call(http_response)
         raise OnPage::ApiError, outcome.error_messages if outcome.failed?
 
         outcome.result

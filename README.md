@@ -3,6 +3,7 @@
 ## WARNING: this software is a pre-release quality, features are provided “as is”, “with all faults”, and without any warranties, guarantees, or conditions of any kind. Your use of pre-release features are at your own risk.
 
 ### TODO
+- [x] use (configurable) timeouts in http calls
 - [ ] setup CI on CircleCI
   - [x] test against multiple interpreters
   - [ ] add rubocop jobs

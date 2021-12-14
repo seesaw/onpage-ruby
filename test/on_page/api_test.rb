@@ -1,13 +1,9 @@
 # frozen_string_literal: true
 
-require "test_helper"
+require_relative "../suite_test"
 
-class ApiTest < Minitest::Test
+class ApiTest < SuiteTest
   def setup
-    OnPage.configure do |config|
-      config.company = "company_name"
-      config.api_token = "api_token"
-    end
     OnPage::Api.reset_request_counter
   end
 
