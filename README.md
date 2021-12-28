@@ -10,6 +10,7 @@
   - [ ] add coverage job
 - [ ] improve test suite
   - [ ] fix flaky "instance variable @schema not initialized" in on-demand relations test
+  - [ ] fix flaky "nil configured timeouts" in http client test
   - [ ] fix on demand nested relation test
   - [ ] fix preloading things test
   - [ ] add coverage support
