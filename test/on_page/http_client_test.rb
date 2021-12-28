@@ -1,58 +1,10 @@
 # frozen_string_literal: true
 
-require "test_helper"
+require_relative "../suite_test"
 require "ostruct"
 require "minitest/mock"
 
-class HttpClientTest < Minitest::Test
-  FakeHttpResponse = Struct.new(:body, :class)
-
-  def test_response_handler_process_nil_responses
-    response_handler = OnPage::Api::JSONResponseHandler.new
-    http_mock = FakeHttpResponse.new(nil, Net::HTTPSuccess)
-    outcome = response_handler.call(http_mock)
-    assert outcome.failed?
-    assert_nil outcome.result
-  end
-
-  def test_response_handler_process_empty_responses
-    response_handler = OnPage::Api::JSONResponseHandler.new
-    http_mock = FakeHttpResponse.new("", Net::HTTPSuccess)
-    outcome = response_handler.call(http_mock)
-    assert outcome.failed?
-    assert_nil outcome.result
-  end
-
-  def test_response_handler_process_json_null_responses
-    response_handler = OnPage::Api::JSONResponseHandler.new
-    http_mock = FakeHttpResponse.new("null", Net::HTTPSuccess)
-    outcome = response_handler.call(http_mock)
-    assert outcome.failed?
-    assert_nil outcome.result
-  end
-
-  def test_response_handler_process_stringyfied_null_responses
-    response_handler = OnPage::Api::JSONResponseHandler.new
-    http_mock = FakeHttpResponse.new('"null"', Net::HTTPSuccess)
-    outcome = response_handler.call(http_mock)
-    assert outcome.failed?
-    assert_nil outcome.result
-  end
-
-  def test_response_handler_process_messages
-    body = <<~TEXT
-      {
-        "message": "Richiesta non valida"
-      }
-    TEXT
-    http_mock = FakeHttpResponse.new(body, Net::HTTPUnprocessableEntity)
-
-    response_handler = OnPage::Api::JSONResponseHandler.new
-    outcome = response_handler.call(http_mock)
-    assert outcome.failed?
-    assert_equal outcome.error_messages, "Richiesta non valida"
-  end
-
+class HttpClientTest < SuiteTest
   def test_wraps_exceptions
     skip("not yet implemented")
   end
