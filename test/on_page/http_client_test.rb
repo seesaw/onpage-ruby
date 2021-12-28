@@ -7,20 +7,32 @@ require "minitest/mock"
 class HttpClientTest < Minitest::Test
   FakeHttpResponse = Struct.new(:body, :class)
 
-  def test_response_handler_process_blank_responses
+  def test_response_handler_process_nil_responses
     response_handler = OnPage::Api::JSONResponseHandler.new
     http_mock = FakeHttpResponse.new(nil, Net::HTTPSuccess)
     outcome = response_handler.call(http_mock)
     assert outcome.failed?
     assert_nil outcome.result
+  end
+
+  def test_response_handler_process_empty_responses
+    response_handler = OnPage::Api::JSONResponseHandler.new
     http_mock = FakeHttpResponse.new("", Net::HTTPSuccess)
     outcome = response_handler.call(http_mock)
     assert outcome.failed?
     assert_nil outcome.result
+  end
+
+  def test_response_handler_process_json_null_responses
+    response_handler = OnPage::Api::JSONResponseHandler.new
     http_mock = FakeHttpResponse.new("null", Net::HTTPSuccess)
     outcome = response_handler.call(http_mock)
     assert outcome.failed?
     assert_nil outcome.result
+  end
+
+  def test_response_handler_process_stringyfied_null_responses
+    response_handler = OnPage::Api::JSONResponseHandler.new
     http_mock = FakeHttpResponse.new('"null"', Net::HTTPSuccess)
     outcome = response_handler.call(http_mock)
     assert outcome.failed?

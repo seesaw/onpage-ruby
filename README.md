@@ -8,10 +8,10 @@
   - [ ] add rubocop jobs
   - [ ] add coverage job
 - [ ] improve test suite
-    - [ ] fix flaky "instance variable @schema not initialized" in on-demand relations test
-    - [ ] fix on demand nested relation test
-    - [ ] fix preloading things test
-    - [ ] add coverage support
+  - [ ] fix flaky "instance variable @schema not initialized" in on-demand relations test
+  - [ ] fix on demand nested relation test
+  - [ ] fix preloading things test
+  - [ ] add coverage support
 - [ ] make rubocop happy
 - [ ] release the gem to rubygems.org
   - [ ] add changelog file
