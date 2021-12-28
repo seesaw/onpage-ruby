@@ -5,6 +5,7 @@ require "on_page"
 
 require "minitest/autorun"
 require "minitest/color"
+require "webmock/minitest"
 
 require "vcr"
 

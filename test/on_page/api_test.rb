@@ -58,9 +58,10 @@ class ApiTest < SuiteTest
   def test_query_non_existing_first
     VCR.use_cassette("non_existant") do
       criteria = OnPage::Api::Criteria.new("non_existant").first
-      assert_raises(OnPage::ApiError, "Cannot find resource non_existant") do
+      error = assert_raises(OnPage::ApiError) do
         OnPage::Api.query(criteria)
       end
+      assert_equal "Cannot find resource non_existant", error.message
     end
   end
 
